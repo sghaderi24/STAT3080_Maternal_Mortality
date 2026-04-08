@@ -1,0 +1,132 @@
+---
+title: |
+  Project Part 2
+  
+  **Maternal Mortality Rates in the United States**
+author: Shanyar Ghaderi
+fontsize: 12pt
+geometry: margin=1in
+urlcolor: black
+output: pdf_document
+header-includes:
+- \usepackage{setspace}
+- \onehalfspacing
+---
+
+\noindent GitHub Repo: \url{https://github.com/sghaderi24/STAT3080_Maternal_Mortality}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, highlight=FALSE)
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+data <- read.csv("maternal_mortality_us_clean.csv")
+
+data <- data %>%
+  rename(
+    Year = year,
+    MortalityRate = maternal_mortality_rate_per_100k
+  )
+```
+
+## Introduction
+
+Maternal mortality remains a major public health concern in the United States. In Part 1, exploratory analysis showed an upward trend in maternal mortality rates over time, suggesting that mortality rates may be increasing in recent years.
+
+This analysis aims to formally test whether maternal mortality rates have increased in more recent years compared to earlier years.
+
+## Methods
+### Research Question
+
+Have maternal mortality rates increased in recent years compared to earlier years in the United States?
+
+### Hypotheses
+
+- H0: The mean maternal mortality rate in recent years is equal to that in earlier years
+- HA: The mean maternal mortality rate in recent years is greater than that in earlier years
+
+### Procedure
+
+A two-sample t-test is used to compare the mean maternal mortality rates between:
+
+- Earlier years (<= 2020)
+- Recent years (> 2020)
+
+This test is appropriate because we are comparing the means of two independent groups using quantitative data.
+
+### Assumptions
+
+1. Independence
+
+Each year’s maternal mortality rate is independent of the others.
+
+2. Normality
+
+The distribution of maternal mortality rates in each group is approximately normal. This is supported by graphical inspection (histograms).
+
+3. No extreme outliers
+
+Visual inspection of the data does not show extreme outliers that would invalidate the test.
+
+
+```{r}
+early <- data %>% filter(Year <= 2020)
+recent <- data %>% filter(Year > 2020)
+
+nrow(early)
+nrow(recent)
+
+t.test(recent$MortalityRate, early$MortalityRate, alternative = "greater")
+```
+## Results
+
+The two-sample Welch t-test comparing maternal mortality rates in recent years and earlier years produced the following results:
+
+t-statistic = 0.347
+degrees of freedom = 51.277
+p-value = 0.3649
+
+The sample means were:
+
+Recent years: 31.39
+Earlier years: 28.89
+
+### Statistical Interpretation
+
+The p-value represents the probability of observing a difference in mean maternal mortality rates as large as the one observed, assuming the null hypothesis is true.
+
+Because the p-value (0.3649) is greater than 0.05, we fail to reject the null hypothesis.
+
+### Statistical Conclusion
+
+There is not sufficient statistical evidence to conclude that maternal mortality rates have increased in recent years compared to earlier years.
+
+
+## Conclusions
+
+The results of the hypothesis test indicate that there is no statistically significant evidence that maternal mortality rates have increased in recent years compared to earlier years.
+
+### Non-statistical Interpretation
+
+Although the exploratory analysis in Part 1 suggested an upward trend in maternal mortality rates, the statistical test shows that this difference is not strong enough to rule out random variation.
+
+### Limitations
+
+- The data are observational and do not establish causation
+- Variability across groups and years may influence results
+- External factors such as healthcare access and socioeconomic conditions are not accounted for
+
+### Generalization
+
+Because the dataset includes national-level data, the findings can be generalized to maternal mortality trends in the United States.
+
+\newpage
+## References
+
+Centers for Disease Control and Prevention (CDC). Maternal mortality rates in the United States. Available from: https://www.cdc.gov/nchs/data/hestat/hestat113.htm
+
+Hoyert DL. Maternal mortality rates in the United States, 2024. National Center for Health Statistics; 2026. Available from: https://dx.doi.org/10.15620/cdc/174651
+
+AI assistance (ChatGPT) was used to support data analysis, coding, and report structuring in accordance with UVA guidelines.
