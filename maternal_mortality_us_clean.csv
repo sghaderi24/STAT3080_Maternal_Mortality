@@ -1,0 +1,57 @@
+year,dimension,group,live_births,maternal_deaths,maternal_mortality_rate_per_100k
+2018,overall,Total U.S.,3791712,658,17.4
+2019,overall,Total U.S.,3747540,754,20.1
+2020,overall,Total U.S.,3613647,861,23.8
+2021,overall,Total U.S.,3664292,1205,32.9
+2022,overall,Total U.S.,3667758,817,22.3
+2023,overall,Total U.S.,3596017,669,18.6
+2024,overall,Total U.S.,3628934,649,17.9
+2018,age,Younger than 25,907782,96,10.6
+2019,age,Younger than 25,877803,111,12.6
+2020,age,Younger than 25,825403,114,13.8
+2021,age,Younger than 25,797334,163,20.4
+2022,age,Younger than 25,784299,113,14.4
+2023,age,Younger than 25,759713,95,12.5
+2024,age,Younger than 25,750800,103,13.7
+2018,age,Age 25–39,2756974,458,16.6
+2019,age,Age 25–39,2739976,544,19.9
+2020,age,Age 25–39,2658445,607,22.8
+2021,age,Age 25–39,2731223,854,31.3
+2022,age,Age 25–39,2738802,578,21.1
+2023,age,Age 25–39,2689250,486,18.1
+2024,age,Age 25–39,2725743,451,16.5
+2018,age,Age 40 and older,126956,104,81.9
+2019,age,Age 40 and older,129761,98,75.5
+2020,age,Age 40 and older,129799,140,107.9
+2021,age,Age 40 and older,135735,188,138.5
+2022,age,Age 40 and older,144657,126,87.1
+2023,age,Age 40 and older,147054,88,59.8
+2024,age,Age 40 and older,152391,95,62.3
+2018,race_ethnicity,"Asian, non-Hispanic",240798,32,13.3
+2019,race_ethnicity,"Asian, non-Hispanic",238769,33,13.8
+2020,race_ethnicity,"Asian, non-Hispanic",219068,27,12.3
+2021,race_ethnicity,"Asian, non-Hispanic",213813,36,16.8
+2022,race_ethnicity,"Asian, non-Hispanic",218994,29,13.2
+2023,race_ethnicity,"Asian, non-Hispanic",215738,23,10.7
+2024,race_ethnicity,"Asian, non-Hispanic",226860,41,18.1
+2018,race_ethnicity,"Black, non-Hispanic",552029,206,37.3
+2019,race_ethnicity,"Black, non-Hispanic",548075,241,44.0
+2020,race_ethnicity,"Black, non-Hispanic",529811,293,55.3
+2021,race_ethnicity,"Black, non-Hispanic",517889,362,69.9
+2022,race_ethnicity,"Black, non-Hispanic",511439,253,49.5
+2023,race_ethnicity,"Black, non-Hispanic",491494,247,50.3
+2024,race_ethnicity,"Black, non-Hispanic",473377,212,44.8
+2018,race_ethnicity,"White, non-Hispanic",1956413,291,14.9
+2019,race_ethnicity,"White, non-Hispanic",1915912,343,17.9
+2020,race_ethnicity,"White, non-Hispanic",1843432,352,19.1
+2021,race_ethnicity,"White, non-Hispanic",1887656,503,26.6
+2022,race_ethnicity,"White, non-Hispanic",1840739,350,19.0
+2023,race_ethnicity,"White, non-Hispanic",1787051,259,14.5
+2024,race_ethnicity,"White, non-Hispanic",1783156,254,14.2
+2018,race_ethnicity,Hispanic,886210,105,11.8
+2019,race_ethnicity,Hispanic,886467,112,12.6
+2020,race_ethnicity,Hispanic,866713,158,18.2
+2021,race_ethnicity,Hispanic,885916,248,28.0
+2022,race_ethnicity,Hispanic,937421,158,16.9
+2023,race_ethnicity,Hispanic,945200,117,12.4
+2024,race_ethnicity,Hispanic,984092,119,12.1
